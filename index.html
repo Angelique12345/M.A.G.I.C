@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+    <head>
+<link rel="stylesheet" type="text/css" href="style.css">
+<meta charset="utf-8">
+<title>M.A.G.I.C</title>
+<style>
+   
+    </style>
+    </head>
+
+    <script>
+            function change(){
+                var img = document.getElementById("ChangeMe");
+                img.src ="snoopy.jpg"
+            } 
+            function add(){
+                var firstnum = parseInt(document.getElementById("num1").value);
+                var secondnum = parseInt(document.getElementById("num2").value);
+                var thirdnum = parseInt(document.getElementById("num3").value);
+                var answer = document.getElementById("answer");
+
+                var answernum = firstnum + secondnum + thirdnum;
+
+                answer.innerHTML ="Answer is: " + answernum;
+                 
+            }
+            function addwords(){
+                var firstword = document.getElementById ("word1").value;
+                var secondword = document.getElementById ("word2").value;
+
+                var firstplace = document.getElementById("place1");
+                var secondplace = document.getElementById("place2");
+                 firstplace.innerHTML = firstword;
+                 secondplace.innerHTML = secondword;
+            }
+    </script>
+
+    <body>
+        <h1>M.A.G.I.C</h1>
+        <H3>Press The Button</H3>
+        <button class="button" onclick="change()">Transform</button>
+        <img id="ChangeMe" src="white pomerian.jpg" height="560">
+        <h1>Calculator</h1>
+        First Number: <input type="number" id="num1"><br>
+        Second Number: <input type="number" id="num2"><br>
+        Third Number: <input type="number" id="num3"><br>
+        <button class="button" onclick="add()">Add</button>
+        <p id="answer"></p>
+        First Word: <input type="text" id="word1"> <br>
+        Second Second: <input type="text" id="word2"> <br>
+        <button onclick="addwords()">Add</button>
+        <p>this is a website<b id="place1">[what?]</b> and all that makes it
+        <b id="place2">[what?]</b>.</p>
+
+        <h1>Change style on hover</h1>
+        <p id="hoverable">Hover over me for something to happen!</p>
+        <audio controls autoplay loop>
+            <source src="tropical.mp3" type="audio/mpeg">
+        </audio>
+
+        <script>
+            var hoverElement = document.getElementById("hoverable");
+
+            hoverElement.onmouseover = function() {mouseOver()};
+            hoverElement.onmouseout = function() {mouseOut()};
+
+            function mouseOver(){
+                hoverElement.style.color = "pink";
+                hoverElement.style.textDecoration = "underline";
+                hoverElement.style.textDecorationStyle = "double";
+            }
+
+                function mouseOut(){
+                    hoverElement.style.color = "yellow";
+                    hoverElement.style.textDecoration = "none";
+                }
+            
+        </script>
+
+        
+    </body>
+</html>
